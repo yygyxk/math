@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.1 集合（五年高考三年模拟·A版）</title>
+<!-- KaTeX 渲染库 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false},
+      {left:'\\(',right:'\\)',display:false},
+      {left:'\\[',right:'\\]',display:true}
+    ],
+    throwOnError:false
+  })"></script>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --border: #e0e0e0;
+    --light-bg: #f8f9fa;
+    --code-bg: #f1f3f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a2e;
+      --fg: #e0e0e0;
+      --accent: #ff6b81;
+      --accent2: #7bed9f;
+      --border: #333;
+      --light-bg: #252540;
+      --code-bg: #2a2a45;
+    }
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--fg);
+    background: var(--bg);
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    color: var(--accent2);
+    margin-bottom: 8px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 22px;
+    color: var(--accent2);
+    margin: 32px 0 16px;
+    padding: 8px 12px;
+    border-left: 4px solid var(--accent);
+    background: var(--light-bg);
+    border-radius: 0 8px 8px 0;
+  }
+  h3 {
+    font-size: 18px;
+    color: var(--accent);
+    margin: 24px 0 12px;
+  }
+  h4 {
+    font-size: 16px;
+    color: var(--accent2);
+    margin: 16px 0 8px;
+  }
+  p { margin: 8px 0; }
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    margin: 28px 0;
+  }
+  ul, ol { margin: 8px 0 8px 24px; }
+  li { margin: 4px 0; }
+  strong { color: var(--accent); }
+  blockquote {
+    border-left: 4px solid var(--accent);
+    background: var(--light-bg);
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  blockquote p { margin: 4px 0; }
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: "JetBrains Mono","Fira Code","Consolas",monospace;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th {
+    background: var(--accent2);
+    color: #fff;
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 600;
+  }
+  td {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  tr:nth-child(even) { background: var(--light-bg); }
+  tr:hover { background: rgba(233,69,96,0.1); }
+  .katex-display {
+    margin: 16px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 0;
+  }
+  .katex { font-size: 1.1em; }
+  /* 易错点标记 */
+  .emoji { font-style: normal; }
+  /* 打印优化 */
+  @media print {
+    body { max-width: 100%; padding: 20px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+    .katex-display { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<h1>1.1 集合（五年高考三年模拟·A版）</h1>
+
+<hr>
+
+<h2>一、 核心概念速记</h2>
+
+<h3>考点 1：集合及其关系</h3>
+
+<p><strong>1. 集合的含义与表示</strong></p>
+
+<li><strong>元素的三特性</strong>：确定性、互异性、无序性。</li>
+<li><strong>元素与集合的关系</strong>：属于（用符号 ∈ 表示）或不属于（用符号 ∉ 表示）。</li>
+<li><strong>常用数集及符号</strong>：</li>
+<li>非负整数集（自然数集）<strong>ℕ</strong></li>
+<li>正整数集 <strong>ℕ\</strong>* （或 <strong>ℕ₊</strong>）</li>
+<li>整数集 <strong>ℤ</strong></li>
+<li>有理数集 <strong>ℚ</strong></li>
+<li>实数集 <strong>ℝ</strong></li>
+<li><strong>集合的表示方法</strong>：列举法、描述法、图示法（Venn 图）。</li>
+
+<p><strong>2. 集合间的基本关系</strong></p>
+
+<table><thead><tr><th>关系</th><th>文字语言</th><th>记法</th></tr></thead>
+<tbody>
+<tr><td><strong>相等</strong></td><td>集合 A 的任何一个元素都是集合 B 的元素，同时集合 B 的任何一个元素都是集合 A 的元素</td><td>A = B</td></tr>
+<tr><td><strong>子集</strong></td><td>集合 A 中任意一个元素均为集合 B 中的元素</td><td>A ⊆ B 或 B ⊇ A</td></tr>
+<tr><td><strong>真子集</strong></td><td>如果集合 A ⊆ B，但存在元素 x ∈ B，且 x ∉ A，则称 A 是 B 的真子集</td><td>A ⊊ B 或 B ⊋ A</td></tr>
+</tbody></table>
+
+<blockquote>
+<p>💡 <strong>有限集的子集个数</strong>：设集合 A 是有 n 个元素的有限集，即 card(A) = n（n ∈ ℕ\*），则：</p>
+<p>- 子集个数为 2ⁿ</p>
+<p>- 真子集个数为 2ⁿ - 1</p>
+<p>- 非空子集个数为 2ⁿ - 1</p>
+<p>- 非空真子集个数为 2ⁿ - 2</p>
+</blockquote>
+
+<hr>
+
+<h3>考点 2：集合的基本运算</h3>
+
+<p>已知全集 U，集合 A，B：</p>
+
+<table><thead><tr><th></th><th><strong>并集</strong></th><th><strong>交集</strong></th><th><strong>补集</strong></th></tr></thead>
+<tbody>
+<tr><td><strong>符号语言</strong></td><td>A ∪ B = { x \</td><td>x ∈ A 或 x ∈ B }</td><td>A ∩ B = { x \</td><td>x ∈ A，且 x ∈ B }</td><td>∁ᵤA = { x \</td><td>x ∈ U，且 x ∉ A }</td></tr>
+<tr><td><strong>性质</strong></td><td>A ∪ ∅ = A <br> A ∪ A = A <br> A ∪ B = B ∪ A <br> A ∪ B = B ⟺ A ⊆ B</td><td>A ∩ ∅ = ∅ <br> A ∩ A = A <br> A ∩ B = B ∩ A <br> A ∩ B = A ⟺ A ⊆ B</td><td>A ∪ (∁ᵤA) = U <br> A ∩ (∁ᵤA) = ∅ <br> ∁ᵤ(∁ᵤA) = A</td></tr>
+</tbody></table>
+
+<p><strong>🔭 知识拓展</strong></p>
+
+<p><strong>1. 德·摩根定律</strong>：</p>
+
+<p>$$C_{U}(A \cup B) = (C_{U}A) \cap (C_{U}B)$$</p>
+
+<p>$$C_{U}(A \cap B) = (C_{U}A) \cup (C_{U}B)$$</p>
+
+<p><strong>2. 容斥原理</strong>：对任意两个有限集合 A，B，有：</p>
+
+<p>$$\text{card}(A \cup B) = \text{card}(A) + \text{card}(B) - \text{card}(A \cap B)$$</p>
+
+<hr>
+
+<h2>二、 核心题型与母题</h2>
+
+<h3>题型一：集合间基本关系的求解及应用</h3>
+
+<p><strong>判断三法</strong>：</p>
+
+<table><thead><tr><th>方法</th><th>适用场景</th></tr></thead>
+<tbody>
+<tr><td><strong>列举法</strong></td><td>元素个数少时，列出全部元素逐一判断</td></tr>
+<tr><td><strong>元素特征法</strong></td><td>确定集合的代表元素，弄清其特征后判断</td></tr>
+<tr><td><strong>数形结合法</strong></td><td>利用数轴或 Venn 图，适合不等式的解集间关系的判断</td></tr>
+</tbody></table>
+
+<hr>
+
+<p><strong>【典例 1】</strong>（2021·全国乙理，2·5分）已知集合 S = { s | s = 2n+1, n ∈ ℤ }，T = { t | t = 4n+1, n ∈ ℤ }，则 S ∩ T = （　　）</p>
+
+<p>A. ∅　　B. S　　C. T　　D. ℤ</p>
+
+<p><strong>【思路点拨】</strong>：S 是全体奇数的集合，T 是被 4 除余 1 的整数集合。T 中的元素形如 …,-3,1,5,9,…，全部是奇数，故 T ⊆ S，即 S ∩ T = T。</p>
+
+<p><strong>【规范解答】</strong>：答案选 <strong>C</strong>。</p>
+
+<p>$$S = \{\ldots, -3, -1, 1, 3, 5, \ldots\} \text{（全体奇数）}$$</p>
+
+<p>$$T = \{\ldots, -7, -3, 1, 5, 9, \ldots\} \text{（被4除余1的整数）}$$</p>
+
+<p>T 中任意元素 t = 4n+1 = 2(2n)+1，必为奇数，故 T ⊆ S，从而 S ∩ T = T。</p>
+
+<hr>
+
+<h3>题型二：集合运算问题的求解</h3>
+
+<p><strong>常用三方法</strong>：</p>
+
+<table><thead><tr><th>方法</th><th>适用场景</th></tr></thead>
+<tbody>
+<tr><td>先"简"后"算"</td><td>根据元素特性区分数集或点集，先化简再运算</td></tr>
+<tr><td>遵"规"守"矩"</td><td>交集抓"公共元素"；并集"合并"；补集关注"你有我无"</td></tr>
+<tr><td>借"形"助"数"</td><td>借助 Venn 图或数轴使抽象问题直观化，端点取舍要留意</td></tr>
+</tbody></table>
+
+<hr>
+
+<p><strong>【典例 3】</strong>（2024·浙江三模，2分）已知集合 A = { x | log₃(x+2) > 1 }，B = { x | x(x-2) < 0 }，则 A ∩ (∁ᴿB) 等于（　　）</p>
+
+<p>A. ∅　　B. (0,1)　　C. (1,2)　　D. [2,+∞)</p>
+
+<p><strong>【思路点拨】</strong>：先分别求 A、B 的解集，再求 B 关于 ℝ 的补集，最后取交集。</p>
+
+<p><strong>【规范解答】</strong>：答案选 <strong>D</strong>。</p>
+
+<p>$$A: \log_3(x+2) > 1 \Rightarrow x+2 > 3 \Rightarrow x > 1, \quad A = (1, +\infty)$$</p>
+
+<p>$$B: x(x-2) < 0 \Rightarrow 0 < x < 2, \quad B = (0, 2)$$</p>
+
+<p>$$C_{\mathbb{R}}B = (-\infty, 0] \cup [2, +\infty)$$</p>
+
+<p>$$A \cap C_{\mathbb{R}}B = (1,+\infty) \cap \left((-\infty,0] \cup [2,+\infty)\right) = [2, +\infty)$$</p>
+
+<hr>
+
+<p><strong>【典例 4】</strong> 已知集合 A = { x | (x-2)(x-3) ≥ 0 }，B = { x | x > a-1 }，若 A ∪ B = ℝ，则实数 a 的取值范围是（　　）</p>
+
+<p>A. (3,+∞)　　B. [2,+∞)　　C. (-∞,2]　　D. (-∞,3]</p>
+
+<p><strong>【思路点拨】</strong>：先求 A 的解集，由 A ∪ B = ℝ 推导 B 必须覆盖 (2,3) 这段"缺口"，进而反推 a 的范围。</p>
+
+<p><strong>【规范解答】</strong>：答案选 <strong>D</strong>。</p>
+
+<p>$$A = (-\infty, 2] \cup [3, +\infty)$$</p>
+
+<p>A 的补集为开区间 (2,3)，要使 A ∪ B = ℝ，B 必须覆盖 (2,3) 中所有点，即：</p>
+
+<p>$$a - 1 \leq 2 \Rightarrow a \leq 3$$</p>
+
+<p>故 a 的取值范围为 (-∞, 3]。</p>
+
+<hr>
+
+<h2>三、 易错坑点防雷</h2>
+
+<li>🧨 <strong>易错点 1（空集必须讨论）</strong>：解决集合间关系 A ⊆ B 或 A ⊊ B 的问题时，若集合 A 中含有参数，通常要分 A = ∅ 和 A ≠ ∅ 两种情况讨论。A = ∅ 的情况极易被忽略，必须引起重视！</li>
+
+<li>🧨 <strong>易错点 2（点集与数集混淆）</strong>：集合 { y | y = 2x, x ∈ ℝ } 与集合 { (x,y) | y = 2x, x ∈ ℝ } 不同！前者是<strong>数集</strong>（值域），后者是<strong>点集</strong>（直线上的点）。</li>
+
+<li>🧨 <strong>易错点 3（子集遗忘空集）</strong>：∅ 是任何集合的子集；∅ 是任何<strong>非空</strong>集合的真子集。求子集时绝不能遗漏 ∅！</li>
+
+<li>🧨 <strong>易错点 4（互异性验证）</strong>：求参数值后，必须将结果代回集合验证元素满足互异性，不能出现重复元素。</li>
+
+<li>🧨 <strong>易错点 5（补集端点取舍）</strong>：利用数轴求补集时，原集合的开/闭端点对应补集的闭/开端点，务必仔细判断 < 与 ≤ 的边界。</li>
+
+
+</body>
+</html>
