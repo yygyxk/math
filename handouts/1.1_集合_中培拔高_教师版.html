@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.1 集合（中培拔高版）</title>
+<!-- KaTeX 渲染库 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false},
+      {left:'\\(',right:'\\)',display:false},
+      {left:'\\[',right:'\\]',display:true}
+    ],
+    throwOnError:false
+  })"></script>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --border: #e0e0e0;
+    --light-bg: #f8f9fa;
+    --code-bg: #f1f3f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a2e;
+      --fg: #e0e0e0;
+      --accent: #ff6b81;
+      --accent2: #7bed9f;
+      --border: #333;
+      --light-bg: #252540;
+      --code-bg: #2a2a45;
+    }
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--fg);
+    background: var(--bg);
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    color: var(--accent2);
+    margin-bottom: 8px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 22px;
+    color: var(--accent2);
+    margin: 32px 0 16px;
+    padding: 8px 12px;
+    border-left: 4px solid var(--accent);
+    background: var(--light-bg);
+    border-radius: 0 8px 8px 0;
+  }
+  h3 {
+    font-size: 18px;
+    color: var(--accent);
+    margin: 24px 0 12px;
+  }
+  h4 {
+    font-size: 16px;
+    color: var(--accent2);
+    margin: 16px 0 8px;
+  }
+  p { margin: 8px 0; }
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    margin: 28px 0;
+  }
+  ul, ol { margin: 8px 0 8px 24px; }
+  li { margin: 4px 0; }
+  strong { color: var(--accent); }
+  blockquote {
+    border-left: 4px solid var(--accent);
+    background: var(--light-bg);
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  blockquote p { margin: 4px 0; }
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: "JetBrains Mono","Fira Code","Consolas",monospace;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th {
+    background: var(--accent2);
+    color: #fff;
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 600;
+  }
+  td {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  tr:nth-child(even) { background: var(--light-bg); }
+  tr:hover { background: rgba(233,69,96,0.1); }
+  .katex-display {
+    margin: 16px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 0;
+  }
+  .katex { font-size: 1.1em; }
+  /* 易错点标记 */
+  .emoji { font-style: normal; }
+  /* 打印优化 */
+  @media print {
+    body { max-width: 100%; padding: 20px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+    .katex-display { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<h1>1.1 集合（中培拔高版）</h1>
+
+<hr>
+
+<h2>一、 知识精讲与深度剖析</h2>
+
+<h3>考点 1：集合及其关系</h3>
+
+<p><strong>1. 集合的含义与表示</strong></p>
+<li><strong>元素的三特性</strong>：<strong>确定性</strong>、<strong>互异性</strong>、<strong>无序性</strong>。</li>
+<li>*点拨：互异性是含参集合问题中最容易遗漏的检验步骤。*</li>
+<li><strong>元素与集合的关系</strong>：属于（用符号 $\in$ 表示）或不属于（用符号 $\notin$ 表示）。</li>
+<li><strong>常用数集及符号</strong>：</li>
+<li>非负整数集（自然数集）$\mathbb{N}$</li>
+<li>正整数集 $\mathbb{N}^*$ （或 $\mathbb{N}_+$）</li>
+<li>整数集 $\mathbb{Z}$</li>
+<li>有理数集 $\mathbb{Q}$</li>
+<li>实数集 $\mathbb{R}$</li>
+<li><strong>集合的表示方法</strong>：列举法、描述法、图示法（Venn 图）。</li>
+
+<p><strong>2. 集合间的基本关系</strong></p>
+
+<table><thead><tr><th>关系</th><th>文字语言</th><th>记法</th></tr></thead>
+<tbody>
+<tr><td><strong>相等</strong></td><td>集合 $A$ 的任何一个元素都是集合 $B$ 的元素，同时 $B$ 的任何一个元素也都是 $A$ 的元素</td><td>$A = B$</td></tr>
+<tr><td><strong>子集</strong></td><td>集合 $A$ 中任意一个元素均为集合 $B$ 中的元素</td><td>$A \subseteq B$ 或 $B \supseteq A$</td></tr>
+<tr><td><strong>真子集</strong></td><td>如果 $A \subseteq B$，但存在元素 $x \in B$，且 $x \notin A$，则称 $A$ 是 $B$ 的真子集</td><td>$A \subsetneq B$ 或 $B \supsetneq A$</td></tr>
+</tbody></table>
+
+<blockquote>
+<p>💡 <strong>有限集的子集个数推导</strong>：</p>
+<p>设集合 $A$ 是有 $n$ 个元素的有限集，即 $\text{card}(A) = n$（$n \in \mathbb{N}^*$）。对于集合中的每一个元素，都有"选"或"不选" $2$ 种状态，根据乘法原理，总组合数为 $2 \times 2 \times \dots \times 2 = 2^n$。</p>
+<p>- 子集个数为 $2^n$</p>
+<p>- 真子集个数为 $2^n - 1$</p>
+<p>- 非空真子集个数为 $2^n - 2$</p>
+</blockquote>
+
+<hr>
+
+<h2>二、 必背符号与性质</h2>
+
+<p>已知全集 $U$，集合 $A$，$B$：</p>
+
+<table><thead><tr><th>运算</th><th><strong>并集</strong></th><th><strong>交集</strong></th><th><strong>补集</strong></th></tr></thead>
+<tbody>
+<tr><td><strong>符号语言</strong></td><td>$A \cup B = \{ x \mid x \in A \text{ 或 } x \in B \}$</td><td>$A \cap B = \{ x \mid x \in A \text{，且 } x \in B \}$</td><td>$\complement_{U}{A} = \{ x \mid x \in U \text{，且 } x \notin A \}$</td></tr>
+<tr><td><strong>核心性质</strong></td><td>$A \cup A = A$ <br> $A \cup B = B \cup A$ <br> $A \cup B = B \Leftrightarrow A \subseteq B$</td><td>$A \cap A = A$ <br> $A \cap B = B \cap A$ <br> $A \cap B = A \Leftrightarrow A \subseteq B$</td><td>$A \cup (\complement_{U}{A}) = U$ <br> $A \cap (\complement_{U}{A}) = \varnothing$ <br> $\complement_{U}{(\complement_{U}{A})} = A$</td></tr>
+</tbody></table>
+
+<p><strong>🔭 知识拓展（中培拔高必备）</strong></p>
+
+<p><strong>1. 德·摩根定律（反演律）</strong>：</p>
+<li>$\complement_{U}{(A \cup B)} = (\complement_{U}{A}) \cap (\complement_{U}{B})$</li>
+<li>$\complement_{U}{(A \cap B)} = (\complement_{U}{A}) \cup (\complement_{U}{B})$</li>
+
+<p><strong>2. 容斥原理</strong>：</p>
+<li>$\text{card}(A \cup B) = \text{card}(A) + \text{card}(B) - \text{card}(A \cap B)$</li>
+
+<hr>
+
+<h2>三、 核心题型与精选变式（限量版）</h2>
+
+<h3>题型一：含参集合的关系与运算（分类讨论思想）</h3>
+
+<p><strong>【典例】</strong> 已知集合 $A = \{x \mid (x-2)(x-3) \geq 0\}$，集合 $B = \{x \mid x > a-1\}$。若 $A \cup B = \mathbb{R}$，则实数 $a$ 的取值范围是（　　）</p>
+
+<p>A. $(3,+\infty)$　　B. $[2,+\infty)$　　C. $(-\infty,2]$　　D. $(-\infty,3]$</p>
+
+<p><strong>【思路点拨】</strong>：</p>
+<p>先解出集合 $A$ 的补集。因为并集是全体实数，所以集合 $B$ 必须完全覆盖住 $A$ 的"缺口"（即 $A$ 的补集区域），借多数轴直观判断端点取舍。</p>
+
+<p><strong>【规范解答】</strong>：</p>
+<p>答案选 <strong>D</strong>。</p>
+<p>$$A = (-\infty, 2] \cup [3, +\infty)$$</p>
+<p>$A$ 的补集为开区间 $(2,3)$，即这是 $A$ 覆盖不到的区域。</p>
+<p>要使 $A \cup B = \mathbb{R}$，集合 $B = (a-1, +\infty)$ 必须覆盖 $(2,3)$ 中所有的点，甚至包括左端点 $2$。</p>
+<p>借助数轴可知，必须满足：</p>
+<p>$$a - 1 \leq 2 \Rightarrow a \leq 3$$</p>
+<p>故 $a$ 的取值范围为 $(-\infty, 3]$。</p>
+
+<p><strong>【变式训练 1-1】（新高考拔高）</strong></p>
+<p>已知集合 $A = \{x \mid x^2 - 3x + 2 = 0\}$，集合 $B = \{x \mid ax - 2 = 0\}$。若 $B \subseteq A$，求实数 $a$ 的所有可能取值组成的集合。</p>
+
+<p><strong>【规范解答】</strong>：</p>
+<p>$$A = \{1, 2\}$$</p>
+<p>因为 $B \subseteq A$，所以 $B$ 可能是 $\varnothing$、$ \{1\}$ 或 $\{2\}$。</p>
+<p>① 当 $B = \varnothing$ 时，方程 $ax - 2 = 0$ 无解，此时 $a = 0$；</p>
+<p>② 当 $B = \{1\}$ 时，将 $x = 1$ 代入方程，得 $a - 2 = 0 \Rightarrow a = 2$；</p>
+<p>③ 当 $B = \{2\}$ 时，将 $x = 2$ 代入方程，得 $2a - 2 = 0 \Rightarrow a = 1$。</p>
+<p>综上，实数 $a$ 的所有可能取值组成的集合为 $\{0, 1, 2\}$。</p>
+
+<hr>
+
+<h2>四、 易错坑点防雷</h2>
+
+<li>🧨 <strong>易错点 1（空集必须讨论）</strong>：在解决 $B \subseteq A$ 等集合包含关系问题时，含有参数的集合 $B$ 有可能为空集 $\varnothing$。<strong>空集是任何集合的子集，极易漏解！</strong></li>
+
+<li>🧨 <strong>易错点 2（元素互异性的检验）</strong>：在含有参数的集合（如 $A = \{a, a^2, 1\}$）中求参数值时，解出参数后必须代回原集合，检验集合中是否出现了重复元素。若出现重复，该解必须舍去。</li>
+
+<li>🧨 <strong>易错点 3（点集与数集的混淆）</strong>：</li>
+<p>集合 $M_1 = \{y \mid y = x^2+1, x \in \mathbb{R}\}$ 是<strong>数集</strong>（函数的值域，$[1, +\infty)$）；</p>
+<p>集合 $M_2 = \{(x,y) \mid y = x^2+1, x \in \mathbb{R}\}$ 是<strong>点集</strong>（抛物线上的点）。两者本质完全不同，不可混淆。</p>
+
+
+</body>
+</html>
